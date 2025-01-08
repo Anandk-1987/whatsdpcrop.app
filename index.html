@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>WhatsDpCrop - Set Full Picture as WhatsApp DP Without Cropping</title>
+  <meta name="description" content="Free WhatsApp DP maker & size converter. Create perfect profile pictures without cropping. Best WhatsApp DP resize tool for full-size display pictures. No signup required!">
+  <meta name="keywords" content="whatsapp dp, whatsapp dp converter, whatsapp dp resize, whatsapp dp size converter, whatsapp dp maker, profile whatsapp dp, whatsapp profile picture, whatsapp dp without crop">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:title" content="WhatsApp DP Optimizer - Perfect Profile Pictures Without Cropping">
+  <meta property="og:description" content="Create perfect WhatsApp display pictures without cropping. Free online WhatsApp DP maker & size converter.">
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourdomain.com/">
+  <meta property="twitter:title" content="WhatsApp DP Optimizer - Perfect Profile Pictures">
+  <meta property="twitter:description" content="Create perfect WhatsApp display pictures without cropping. Free online WhatsApp DP maker & size converter.">
+  <meta property="twitter:image" content="https://yourdomain.com/twitter-image.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./src/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=your-client-id" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="/logo.svg" alt="DP Optimizer Logo" class="logo-img">
+          <span>DP Optimizer</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container hero-content">
+      <h1>Create Perfect WhatsApp Display Pictures</h1>
+      <p class="subtitle">No Cropping Required • Instant Resize • Professional Results</p>
+      <div class="features">
+        <span class="feature"><span class="icon">✨</span> Full Size Display</span>
+        <span class="feature"><span class="icon">🎯</span> Perfect Fit</span>
+        <span class="feature"><span class="icon">⚡</span> Instant</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Ad Space -->
+    <div class="ad-container top-ad">
+      <!-- AdSense Ad Unit -->
+    </div>
+
+    <section class="upload-section">
+      <div class="upload-card">
+        <div class="upload-area" id="dropZone" onclick="document.getElementById('imageInput').click()">
+          <div class="upload-content">
+            <div class="upload-icon">📸</div>
+            <h3>Upload Your Image</h3>
+            <p>Drag & drop or <span class="highlight">click to upload</span></p>
+            <p class="file-types">Supports JPG, PNG, WEBP</p>
+          </div>
+        </div>
+        <input type="file" id="imageInput" accept="image/*" hidden>
+      </div>
+    </section>
+
+    <section class="controls-section">
+      <div class="controls-card">
+        <div class="card-header">
+          <h3>Customize Your DP</h3>
+          <p class="helper-text">Choose how you want your profile picture to look</p>
+        </div>
+
+        <div class="style-options">
+          <label class="style-option">
+            <input type="radio" name="bgStyle" value="blur" checked>
+            <span class="radio-custom">
+              <span class="icon">🖼️</span>
+              <span class="label">Blur Background</span>
+              <span class="description">Professional look with blurred edges</span>
+              <span class="recommended">Recommended</span>
+            </span>
+          </label>
+          
+          <label class="style-option">
+            <input type="radio" name="bgStyle" value="solid">
+            <span class="radio-custom">
+              <span class="icon">🎨</span>
+              <span class="label">Solid Color</span>
+              <span class="description">Clean look with solid background</span>
+            </span>
+          </label>
+        </div>
+
+        <div id="colorPickerContainer" class="color-picker-container">
+          <div class="color-picker-header">
+            <h3>Background Color</h3>
+            <p class="helper-text">Choose from presets or pick your own</p>
+          </div>
+          <div class="color-presets">
+            <button class="color-preset" style="--color: #25D366" data-color="#25D366" title="WhatsApp Green"></button>
+            <button class="color-preset" style="--color: #128C7E" data-color="#128C7E" title="Dark Green"></button>
+            <button class="color-preset" style="--color: #075E54" data-color="#075E54" title="WhatsApp Dark"></button>
+            <button class="color-preset" style="--color: #000000" data-color="#000000" title="Black"></button>
+            <button class="color-preset" style="--color: #FFFFFF" data-color="#FFFFFF" title="White"></button>
+            <div class="custom-color">
+              <input type="color" id="bgColor" value="#25D366" title="Choose custom color">
+              <span class="custom-color-label">Custom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Space -->
+    <div class="ad-container middle-ad">
+      <!-- AdSense Ad Unit -->
+    </div>
+
+    <section class="preview-section">
+      <div class="preview-card">
+        <div class="card-header">
+          <h2>Preview</h2>
+          <p class="helper-text">See how your DP will look on WhatsApp</p>
+        </div>
+        <div class="preview-container">
+          <canvas id="previewCanvas"></canvas>
+          <div class="preview-overlay">
+            <div class="preview-message">
+              <span class="icon">🖼️</span>
+              <p>Upload an image to see preview</p>
+            </div>
+          </div>
+        </div>
+        <div class="action-buttons">
+          <button id="downloadBtn" class="download-btn" disabled>
+            <span class="icon">⬇️</span>
+            Download DP
+          </button>
+          <button id="shareBtn" class="share-btn" disabled>
+            <span class="icon">📤</span>
+            Share
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <h2>Why Choose Our DP Optimizer?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🎯</span>
+          <h3>Perfect Fit</h3>
+          <p>No more cropped faces or missing details</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Instant Results</h3>
+          <p>Get your optimized DP in seconds</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔒</span>
+          <h3>Privacy First</h3>
+          <p>No image storage, everything stays on your device</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💫</span>
+          <h3>Professional Look</h3>
+          <p>Make your profile stand out</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Space -->
+    <div class="ad-container bottom-ad">
+      <!-- AdSense Ad Unit -->
+    </div>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary>How do I set a full picture as WhatsApp DP?</summary>
+          <p>Upload your image, choose your preferred background style, and download. The optimized image will fit perfectly as your WhatsApp display picture without cropping.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's the perfect WhatsApp DP size?</summary>
+          <p>The ideal size is 640x640 pixels. Our tool automatically optimizes your image to this perfect size while maintaining quality.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will I lose image quality?</summary>
+          <p>No, we maintain the best possible quality while optimizing your image for WhatsApp's requirements.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is this service free?</summary>
+          <p>Yes, our WhatsApp DP Optimizer is completely free to use with no watermarks or hidden costs.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="/logo.svg" alt="DP Optimizer Logo" class="logo-img">
+          <span>DP Optimizer</span>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/privacy.html">Privacy Policy</a></li>
+              <li><a href="/terms.html">Terms of Use</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WhatsDpCrop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
